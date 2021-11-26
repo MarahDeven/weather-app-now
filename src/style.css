@@ -62,3 +62,13 @@ li:first-letter {
   font-size: 16px;
   top: -33px;
 }
+
+.weather-temp .active {
+  color: black;
+}
+
+#celsius,
+#fahrenheit {
+  text-decoration: none;
+  cursor: default;
+}
