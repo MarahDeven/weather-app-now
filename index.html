@@ -12,6 +12,12 @@
       crossorigin="anonymous"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -19,26 +25,42 @@
     <div class="container">
       <div class="weather-app-wrap">
         <div class="weather-app">
-          <div class="preview">
-            <h1 id="city"></h1>
-            <ul>
-              <li id="date"></li>
-              <li id="conditions"></li>
-            </ul>
-          </div>
+          <form id="search-form" class="mb-5">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a city..."
+                  class="form-control"
+                  id="search-city"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" value="Search" class="btn btn-info" />
+              </div>
+            </div>
+          </form>
           <div class="row">
-            <div class="col-6">
+            <div class="col-9">
               <div class="clearfix weather-temp">
                 <img src="" alt="clear" id="icon" class="float-left" />
                 <strong id="temperature"></strong>
                 <span class="units">°F | <a href="#">°C</a></span>
               </div>
-            </div>
-            <div class="col-6">
               <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span>mph</li>
               </ul>
+            </div>
+            <div class="col-3">
+              <div class="preview">
+                <h1 id="city"></h1>
+                <ul>
+                  <li id="date"></li>
+                  <li id="conditions"></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

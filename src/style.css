@@ -1,5 +1,5 @@
 body {
-  font-family: Google Sans, Roboto, arial, sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 h1 {
@@ -19,7 +19,7 @@ li {
   list-style: none;
   font-size: 16px;
   font-weight: 100;
-  line-height: 18px;
+  line-height: 20px;
   margin: 0;
   padding: 0;
 }
@@ -29,14 +29,15 @@ li:first-letter {
 }
 
 .weather-app-wrap {
+  background-image: url(https://xoxobella.com/wp-content/uploads/2021/06/sunrise_sunset_captions_puns_quotes_instagram-7.jpg);
+  background-size: 600px;
+  background-repeat: no-repeat;
   max-width: 600px;
   margin: 30px auto;
 }
 
 .weather-app {
-  padding: 20px;
-  border: 1px solid #68c17d;
-  border-radius: 5px;
+  padding: 55px;
 }
 
 .preview {
