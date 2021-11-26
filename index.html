@@ -27,7 +27,7 @@
         <div class="weather-app">
           <form id="search-form" class="mb-5">
             <div class="row">
-              <div class="col-9">
+              <div class="col-7">
                 <input
                   type="search"
                   placeholder="Enter a city..."
@@ -36,8 +36,14 @@
                   autocomplete="off"
                 />
               </div>
-              <div class="col-3">
+              <div class="col-5">
                 <input type="submit" value="Search" class="btn btn-info" />
+                <input
+                  type="button"
+                  value="Current"
+                  class="btn btn-warning"
+                  id="current"
+                />
               </div>
             </div>
           </form>
@@ -52,6 +58,9 @@
                 >
               </div>
               <ul>
+                <li>
+                  Hi <span id="hi"> </span>°F | Lo <span id="lo"></span>°F
+                </li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span>mph</li>
               </ul>
