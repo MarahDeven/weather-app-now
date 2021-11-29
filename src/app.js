@@ -20,6 +20,33 @@ let day = days[date.getDay()];
 let dateElement = document.querySelector("#date");
 dateElement.innerHTML = `${day} ${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tues", "Wed", "Thurs", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="weekdays"><b>${day}</b></div>
+                <img
+                  src="http://openweathermap.org/img/wn/04n@2x.png"
+                  alt="cloudy"
+                  width="40px"
+                />
+                <div class="five-day-forecast-temp">
+                  <span class="five-day-forecast-max">38</span>°F |
+                  <span class="five-day-forecast-min">21</span>°F
+                </div>
+              </div>
+`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -101,3 +128,4 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheit);
 
 search("Portland");
+displayForecast();
