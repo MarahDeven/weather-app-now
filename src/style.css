@@ -72,3 +72,20 @@ li:first-letter {
   text-decoration: none;
   cursor: default;
 }
+
+.github,
+.netlify {
+  color: #df526d;
+}
+
+.five-day-forecast {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #ff5722;
+}
+
+.weekdays {
+  color: #8a1253;
+  font-size: 15px;
+}
